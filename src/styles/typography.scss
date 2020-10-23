@@ -1,0 +1,16 @@
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+::selection {
+  background: $selection-color;
+}

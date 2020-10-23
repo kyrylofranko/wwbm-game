@@ -1,15 +1,14 @@
 import React from 'react';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import { Welcome } from './pages/Welcome';
+import { Game } from './pages/Game';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" component={Welcome} />
+      <Route exact path="/questions" component={Game} />
+    </Switch>
   );
 }
 
