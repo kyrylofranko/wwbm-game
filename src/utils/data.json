@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "body": "In what children's game are participants chased by someone designated \"It\"?",
+      "answers": [
+        "Tag",
+        "Simon Says",
+        "Charades",
+        "Hopscotch"
+      ],
+      "correct" : 0,
+      "winning": "$500"
+    },
+    {
+      "id": 2,
+      "body": "On a radio, stations are changed by using what control?",
+      "answers": [
+        "Tuning",
+        "Volume",
+        "Bass",
+        "Treble"
+      ],
+      "correct" : 0,
+      "winning": "$1,000"
+    },
+    {
+      "id": 3,
+      "body": "Which material is most dense?",
+      "answers": [
+        "Silver",
+        "Styrofoam",
+        "Butter",
+        "Gold"
+      ],
+      "correct" : 3,
+      "winning": "$2,000"
+    },
+    {
+      "id": 4,
+      "body": "Which state in the United States is largest by area?",
+      "answers": [
+        "Alaska",
+        "California",
+        "Texas",
+        "Hawaii"
+      ],
+      "correct" : 0,
+      "winning": "$4,000"
+    },
+    {
+      "id": 5,
+      "body": "What is Aurora Borealis commonly known as?",
+      "answers": [
+        "Fairy Dust",
+        "Northern Lights",
+        "Book of ages",
+        "a Game of Thrones main character"
+      ],
+      "correct" : 1,
+      "winning": "$8,000"
+    },
+    {
+      "id": 6,
+      "body": "Galileo was an Italian astronomer who",
+      "answers": [
+        "developed the telescope",
+        "discovered four satellites of Jupiter",
+        "discovered that the movement of pendulum produces a regular time measurement",
+        "All of the above"
+      ],
+      "correct": 3,
+      "winning": "$16,000"
+    },
+    {
+      "id": 7,
+      "body": "Exposure to sunlight helps a person improve his health because",
+      "answers": [
+        "the infrared light kills bacteria in the body",
+        "resistance power increases",
+        "the pigment cells in the skin get stimulated and produce a healthy tan",
+        "the ultraviolet rays convert skin oil into Vitamin D"
+      ],
+      "correct": 3,
+      "winning": "$32,000"
+    },
+    {
+      "id": 8,
+      "body": "Sir Thomas Fearnley Cup is awarded to",
+      "answers": [
+        "a club or a local sport association for remarkable achievements",
+        "amateur athlete, not necessarily an Olympian",
+        "National Olympic Committee for outstanding work",
+        "None of the above"
+      ],
+      "correct": 0,
+      "winning": "$64,000"
+    },
+    {
+      "id": 9,
+      "body": "Oscar Awards were instituted in",
+      "answers": [
+        "1968",
+        "1929",
+        "1901",
+        "1965"
+      ],
+      "correct": 1,
+      "winning": "$125,000"
+    },
+    {
+      "id": 10,
+      "body": "When did Margaret Thatcher became the first female Prime Minister of Britain?",
+      "answers": [
+        "1998",
+        "1989",
+        "1979",
+        "1800"
+      ],
+      "correct": 2,
+      "winning": "$250,000"
+    },
+    {
+      "id": 11,
+      "body": "When is the International Workers' Day?",
+      "answers": [
+        "15th April",
+        "12th December",
+        "1st May",
+        "1st August"
+      ],
+      "correct": 2,
+      "winning": "$500,000"
+    },
+    {
+      "id": 12,
+      "body": "When did China test their first atomic device?",
+      "answers": [
+        "1962",
+        "1963",
+        "1964",
+        "1965"
+      ],
+      "correct": 2,
+      "winning": "$1,000,000"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.game {
+  height: 100vh;
+  display: flex;
+}
+
+.questions {
+  width: 73%;
+  padding: 130px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $questions-bg-color;
+}

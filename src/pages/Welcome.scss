@@ -1,3 +1,24 @@
+.welcome {
+  height: 100vh;
+  max-width: $container-width;
+  padding-right: $container-padding-laptop;
+  padding-left: $container-padding-laptop;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    height: 34vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.triangle-bg {
+  background: linear-gradient(to bottom right, #fff 0%, #fff 50%, $triangle-bg-color 50%, $triangle-bg-color 100%);
+}
+
 .start {
   width: 40%;
   height: 100%;

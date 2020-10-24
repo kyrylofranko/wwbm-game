@@ -1,0 +1,66 @@
+.answers {
+  height: 176px;
+  max-width: 810px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.answer {
+  position: relative;
+  width: 50%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/images/answer.png") no-repeat;
+  background-size: 100% 100%;
+
+  &:hover {
+    background-image: url("../assets/images/answer--hover.png");
+  }
+
+  &__letter {
+    margin-right: 8px;
+    color: $primary;
+  }
+
+  &__text {
+    position: absolute;
+    top: 40%;
+    left: 11%;
+    display: flex;
+  }
+}
+
+.answer--selected {
+  @extend .answer;
+  background: url("../assets/images/answer--selected.png") no-repeat;
+  background-size: 100% 100%;
+
+  &:hover {
+    background: url("../assets/images/answer--selected.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.answer--wrong {
+  @extend .answer;
+  background: url("../assets/images/answer--wrong.png") no-repeat;
+  background-size: 100% 100%;
+
+  &:hover {
+    background: url("../assets/images/answer--wrong.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.answer--correct {
+  @extend .answer;
+  background: url("../assets/images/answer--correct.png") no-repeat;
+  background-size: 100% 100%;
+
+  &:hover {
+    background: url("../assets/images/answer--correct.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}

@@ -1,0 +1,32 @@
+.winnings {
+  width: 27%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    width: 376px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    height: 40px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/images/winning-frame.png") no-repeat;
+    background-size: 100% 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item--active {
+    @extend .winnings__item;
+    background: url("../assets/images/winning-frame--active.png") no-repeat;
+    background-size: 100% 100%;
+  }
+}

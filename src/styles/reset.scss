@@ -17,3 +17,11 @@ h5, {
   font-family: 'Inter', sans-serif;
   line-height: 116%;
 }
+
+:focus {
+  outline: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
