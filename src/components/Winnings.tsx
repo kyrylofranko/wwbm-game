@@ -1,13 +1,15 @@
 import React from 'react';
 import { Winning } from './Winning';
-import { useStore } from '../store/mobx';
+import { useStore } from '../store';
+import { observer } from 'mobx-react';
 
-export const Winnings = () => {
-  const { questions } = useStore();
+export const Winnings = observer(() => {
+  const Store = useStore();
+
 
   return (
     <ul className="winnings__list">
-      {questions.map((item) => <Winning key={item.id} {...item} />).reverse()}
+      {Store.questions.map((item) => <Winning key={item.id} {...item} />).reverse()}
     </ul>
   );
-};
+});

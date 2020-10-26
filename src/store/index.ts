@@ -12,6 +12,10 @@ export interface Question {
 class Store {
   questions: Question[] = [];
   currentQuestion: Question | null = null;
+  correctAnswer: number | null = null;
+  activeAnswer: number | null = null;
+  wrongAnswer: number | null = null;
+  isCheckingAnswer: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -24,6 +28,28 @@ class Store {
 
   setCurrentQuestion(question: Question | null) {
     this.currentQuestion = question;
+  }
+
+  setCheckingAnswer(value: boolean) {
+    this.isCheckingAnswer = value;
+  }
+
+  setCorrectAnswer(answerIndex: number | null) {
+    this.correctAnswer = answerIndex;
+  }
+
+  setActiveAnswer(answerIndex: number | null) {
+    this.activeAnswer = answerIndex;
+  }
+
+  setWrongAnswer(answerIndex: number | null) {
+    this.wrongAnswer = answerIndex;
+  }
+
+  deleteAnswersHighlights() {
+    this.activeAnswer = null;
+    this.correctAnswer = null;
+    this.wrongAnswer = null;
   }
 }
 

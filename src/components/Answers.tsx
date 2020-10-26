@@ -1,24 +1,71 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Answer } from './Answer';
 import { v4 as uuid } from 'uuid';
-import { useStore } from '../store/mobx';
+import { useStore } from '../store';
+import { observer } from 'mobx-react';
+import useSound from 'use-sound';
+import CheckingAnswer from '../assets/sounds/final_answer.mp3';
+import WrongAnswer from '../assets/sounds/wrong_answer.mp3';
+import CorrecAnswer from '../assets/sounds/correct_answer.mp3';
 
-export const Answers = () => {
+type AnswersProps = {
+  stopPlayNextRound(id?: string): void;
+}
+
+export const Answers = observer(({ stopPlayNextRound }: AnswersProps) => {
   const Store = useStore();
-  const [activeAnswer, setActiveAnswer] = useState<number | null>(null);
-  const [correctAnswer, setCorrectAnswer] = useState<number | null>(null);
-  const [wrongAnswer, setWrongAnswer] = useState<number | null>(null);
+
+  const [playCheckingAnswer, { stop: stopPlayCheckingAnswer }] = useSound(
+      CheckingAnswer,
+      { volume: 0.15 }
+  );
+
+  const [playWrongAnswer] = useSound(
+      WrongAnswer,
+      { volume: 0.15 }
+  );
+
+  const [playCorrectAnswer, { stop: stopPlayCorrectAnswer }] = useSound(
+      CorrecAnswer,
+      { volume: 0.15 }
+  );
+
+  useEffect(() => {
+    if (Store.correctAnswer === null) {
+      stopPlayCorrectAnswer();
+    }
+  }, [Store.correctAnswer, stopPlayCorrectAnswer])
+
 
   const handleAnswerSelect = (answerIndex: number) => {
-    setActiveAnswer(answerIndex);
+    if (Store.isCheckingAnswer || Store.correctAnswer !== null) {
+      return;
+    } else {
+      stopPlayNextRound();
+      Store.setActiveAnswer(answerIndex);
+      Store.setCheckingAnswer(true);
+      playCheckingAnswer();
 
-    setTimeout(() => {
-      if (answerIndex === Store.currentQuestion?.correct) {
-        setCorrectAnswer(answerIndex);
-      } else {
-        setWrongAnswer(answerIndex);
-      }
-    }, 3000);
+      setTimeout(() => {
+        if (answerIndex === Store.currentQuestion?.correct) {
+          Store.setCorrectAnswer(answerIndex);
+          playCorrectAnswer();
+          stopPlayCheckingAnswer();
+          Store.setCheckingAnswer(false);
+        } else {
+          stopPlayCheckingAnswer();
+          Store.setWrongAnswer(answerIndex);
+          playWrongAnswer();
+          setTimeout(() => {
+            if (Store.currentQuestion) {
+              Store.setCorrectAnswer(Store.currentQuestion.correct)
+            }
+
+            Store.setCheckingAnswer(false);
+          }, 1700)
+        }
+      }, 5000);
+    }
   };
 
   return (
@@ -28,12 +75,9 @@ export const Answers = () => {
           key={uuid()}
           answer={answer}
           index={index}
-          activeAnswer={activeAnswer}
-          correctAnswer={correctAnswer}
-          wrongAnswer={wrongAnswer}
           handleSelect={handleAnswerSelect}
         />
       ))}
     </ul>
   );
-};
+});

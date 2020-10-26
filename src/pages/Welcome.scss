@@ -7,11 +7,29 @@
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: $tablets-landscape-breakpoint) {
+    justify-content: center;
+  }
+
+  @media screen and (max-width: $phones-big-breakpoint) {
+    padding-right: $container-padding-mobile;
+    padding-left: $container-padding-mobile;
+  }
+
   &__container {
     height: 34vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (max-width: $tablets-landscape-breakpoint) {
+      height: auto;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $phones-medium-breakpoint) {
+      height: 90vh;
+    }
   }
 }
 
@@ -26,7 +44,35 @@
   flex-direction: column;
   justify-content: space-around;
 
+  @media screen and (max-width: $tablets-landscape-breakpoint) {
+    width: auto;
+    align-items: center;
+  }
+
+  @media screen and (max-width: $phones-medium-breakpoint) {
+    height: 45vh;
+    justify-content: space-between;
+    font-size: 40px;
+  }
+
   &__heading {
     height: 50%;
+
+    @media screen and (max-width: $tablets-landscape-breakpoint) {
+      height: 40vw;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $phones-big-breakpoint) {
+      font-size: 48px;
+    }
+
+    @media screen and (max-width: $phones-medium-breakpoint) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: $phones-small-breakpoint) {
+      font-size: 32px;
+    }
   }
 }

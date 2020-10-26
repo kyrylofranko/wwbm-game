@@ -3,6 +3,20 @@
   max-width: 810px;
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (max-width: $tablets-portrait-breakpoint) {
+    height: 350px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: $phones-medium-breakpoint) {
+    height: 290px;
+  }
+
+  @media screen and (max-width: $phones-old-breakpoint) {
+    height: 250px;
+  }
 }
 
 .answer {
@@ -14,21 +28,43 @@
   align-items: center;
   background: url("../assets/images/answer.png") no-repeat;
   background-size: 100% 100%;
+  cursor: pointer;
+
+  @media screen and (max-width: $tablets-portrait-breakpoint) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $phones-medium-breakpoint) {
+    height: 60px;
+  }
+
+  @media screen and (max-width: $phones-old-breakpoint) {
+    height: 50px;
+  }
 
   &:hover {
     background-image: url("../assets/images/answer--hover.png");
   }
 
-  &__letter {
-    margin-right: 8px;
-    color: $primary;
-  }
-
-  &__text {
+  &__info {
     position: absolute;
     top: 40%;
     left: 11%;
     display: flex;
+  }
+
+  &__letter {
+    margin-right: 8px;
+    color: $primary;
+    user-select: none;
+  }
+
+  &__body {
+    user-select: none;
+
+    @media screen and (max-width: $phones-old-breakpoint) {
+      font-size: 14px;
+    }
   }
 }
 

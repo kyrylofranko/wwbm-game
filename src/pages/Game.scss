@@ -1,4 +1,5 @@
 .game {
+  position: relative;
   height: 100vh;
   display: flex;
 }
@@ -10,4 +11,38 @@
   flex-direction: column;
   justify-content: space-between;
   background: $questions-bg-color;
+
+  @media screen and (max-width: $tablets-landscape-breakpoint) {
+    width: 67%;
+  }
+
+  @media screen and (max-width: $phones-big-breakpoint) {
+    width: 100%;
+    padding: 50px 0 90px;
+  }
+
+  @media screen and (max-width: $phones-medium-breakpoint) {
+    padding-top: 30px;
+  }
+
+  @media screen and (max-width: $phones-old-breakpoint) {
+    padding-top: 20px;
+  }
+
+  &__heading {
+    @media screen and (max-width: $phones-big-breakpoint) {
+      padding-left: 30px;
+      padding-right: 30px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $phones-medium-breakpoint) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: $phones-old-breakpoint) {
+      font-size: 20px;
+    }
+  }
+
 }

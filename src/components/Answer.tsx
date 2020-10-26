@@ -1,28 +1,21 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import classNames from 'classnames';
+import { observer } from 'mobx-react';
+import { useStore } from '../store';
 
 type AnswerProps = {
   answer: string;
-  activeAnswer: number | null;
-  correctAnswer: number | null;
-  wrongAnswer: number | null;
   index: number;
   handleSelect(answerIndex: number): void;
 };
 
-export const Answer = ({
-  answer,
-  activeAnswer,
-  correctAnswer,
-  wrongAnswer,
-  index,
-  handleSelect,
-}: AnswerProps) => {
+export const Answer = observer(({ answer, index, handleSelect }: AnswerProps) => {
+  const Store = useStore();
   const itemStyle = classNames({
     answer: true,
-    'answer--selected': activeAnswer === index,
-    'answer--correct': correctAnswer === index,
-    'answer--wrong': wrongAnswer === index,
+    'answer--selected': Store.activeAnswer === index,
+    'answer--correct': Store.correctAnswer === index,
+    'answer--wrong': Store.wrongAnswer === index,
   });
 
   const generateAnswerLetter = (index: number) => {
@@ -37,12 +30,14 @@ export const Answer = ({
         return 'D';
     }
   };
+  const onClick = useCallback(() => handleSelect(index), [handleSelect, index]);
+
   return (
-    <li className={itemStyle} value={answer} onClick={() => handleSelect(index)}>
-      <div className="answer__text">
+    <li className={itemStyle} onClick={onClick}>
+      <div className="answer__info">
         <p className="answer__letter">{generateAnswerLetter(index)}</p>
-        <p>{answer}</p>
+        <p className="answer__body">{answer}</p>
       </div>
     </li>
   );
-};
+});

@@ -1,0 +1,61 @@
+.sandwich {
+  width: 33px;
+  height: 22px;
+  display: none;
+  cursor: pointer;
+
+  @media screen and (max-width: $phones-big-breakpoint) {
+    margin-right: 50px;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: $phones-medium-breakpoint) {
+    width: 24px;
+    height: 16px;
+  }
+
+  @media screen and (max-width: $phones-medium-breakpoint) {
+    margin-right: 35px;
+  }
+
+  @media screen and (max-width: $phones-old-breakpoint) {
+    margin-right: 15px;
+  }
+
+  span {
+    display: block;
+    height: 3px;
+    background-color: $font-primary;
+    transition: 0.4s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  }
+
+  &--clicked {
+
+    span {
+      &:first-child {
+        @media screen and (max-width: $phones-big-breakpoint) {
+          transform: translateY(4px) rotate(45deg);
+        }
+      }
+
+      &:nth-child(2) {
+        transform: translateX(200%);
+        opacity: 0;
+      }
+
+      &:last-child {
+        @media screen and (max-width: $phones-big-breakpoint) {
+          transform: translateY(-15px) rotate(-45deg);
+        }
+
+        @media screen and (max-width: $phones-medium-breakpoint) {
+          transform: translateY(-9px) rotate(-45deg);
+        }
+      }
+    }
+  }
+}
