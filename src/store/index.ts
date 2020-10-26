@@ -1,5 +1,6 @@
 import { makeAutoObservable } from 'mobx';
 import { createContext, useContext } from 'react';
+import data from '../utils/data.json';
 
 export interface Question {
   id: number;
@@ -16,14 +17,18 @@ class Store {
   activeAnswer: number | null = null;
   wrongAnswer: number | null = null;
   isCheckingAnswer = false;
+  isStartingGameSoundPlaying = false;
 
   constructor() {
     makeAutoObservable(this);
   }
 
   getData() {
-    const data = require('../utils/data.json');
     this.questions = data.questions;
+  }
+
+  setStartingGameSoundPlaying(value: boolean) {
+    this.isStartingGameSoundPlaying = value;
   }
 
   setCurrentQuestion(question: Question | null) {

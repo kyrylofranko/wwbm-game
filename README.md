@@ -1,4 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 💸 Who Wants to Be a Millionaire? 💸
+
+## Technologies used:
+* ES6
+* React
+* React Router
+* MobX
+* TypeScript
+* Sass
+```diff
+! Сareful, the game contains sounds
+```
+![layout](img/preview.png)
+
+### Straightforward steps to open project
+
+1) Clone project with this beautiful github command ```gh repo clone kiramarks/wwbm-game```
+2) In the project directory run ```npm install``` and then ```npm run start```.
+3) Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 
 ## Available Scripts
 
@@ -15,7 +34,7 @@ You will also see any lint errors in the console.
 ### `npm run lint`
 
 Besides checking style, linters are also excellent tools for finding certain classes of bugs, such as those related to variable scope. 
-
+So, do it ✌🏻.
 
 ### `npm run deploy`
 

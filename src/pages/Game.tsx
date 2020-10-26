@@ -12,12 +12,15 @@ import easyRound from '../assets/sounds/easy.mp3';
 import mediumRound from '../assets/sounds/medium.mp3';
 import hardRound from '../assets/sounds/hard.mp3';
 import hardRoundMillion from '../assets/sounds/hard_million.mp3';
+import LetsPlay from '../assets/sounds/lets_play.mp3';
 
 export const Game = observer(() => {
   const Store = useStore();
 
   const [modalVisible, setModalVisible] = useState(false);
   const [isWinningsOpen, setWinningsOpen] = useState(false);
+
+  const [playLetsPlay, { isPlaying: isLetsPlaySoundPlaying }] = useSound(LetsPlay, { volume: 0.1 });
 
   const [
     playNextRound,
@@ -27,17 +30,17 @@ export const Game = observer(() => {
   const [
     playEasyRound,
     { stop: stopEasyRound, isPlaying: isEasyRoundPlaying },
-  ] = useSound(easyRound, { volume: 0.1 });
+  ] = useSound(easyRound, { volume: 0.1, soundEnabled: !isLetsPlaySoundPlaying });
 
   const [
     playMediumRound,
     { stop: stopMediumRound, isPlaying: isMediumRoundPlaying },
-  ] = useSound(mediumRound, { volume: 0.1 });
+  ] = useSound(mediumRound, { volume: 0.1, soundEnabled: !isLetsPlaySoundPlaying });
 
   const [
     playHardRound,
     { stop: stopHardRound, isPlaying: isHardRoundPlaying },
-  ] = useSound(hardRound, { volume: 0.1 });
+  ] = useSound(hardRound, { volume: 0.1, soundEnabled: !isLetsPlaySoundPlaying });
 
   const [
     playHardRoundMillion,
@@ -78,6 +81,12 @@ export const Game = observer(() => {
   ]);
 
   useEffect(() => {
+    if (isNextRoundPlaying) {
+      stopPlayingRoundSounds();
+    }
+  }, [isNextRoundPlaying, stopPlayingRoundSounds]);
+
+  useEffect(() => {
     if (!isNextRoundPlaying) {
       if (Store.currentQuestion?.id! < 4) {
         playEasyRound();
@@ -96,13 +105,19 @@ export const Game = observer(() => {
       }
     }
   }, [
-    isNextRoundPlaying,
     Store.currentQuestion,
+    isNextRoundPlaying,
     playEasyRound,
     playMediumRound,
     playHardRound,
     playHardRoundMillion,
   ]);
+
+  useEffect(() => {
+    if (Store.currentQuestion?.id === 0) {
+      playLetsPlay();
+    }
+  }, [playLetsPlay]);
 
   useEffect(() => {
     Store.getData();

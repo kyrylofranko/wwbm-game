@@ -124,10 +124,10 @@
       "id": 10,
       "body": "Lhasa airport at Tibet is the World's",
       "answers": [
-        "largest airport",
-        "highest airport",
-        "lowest airport",
-        "busiest airport"
+        "Largest airport",
+        "Highest airport",
+        "Lowest airport",
+        "Busiest airport"
       ],
       "correct": 1,
       "winning": "$500,000"
