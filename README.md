@@ -1,5 +1,7 @@
 # 💸 Who Wants to Be a Millionaire? 💸
 
+⏯ Play - https://kiramarks.github.io/wwbm-game
+
 ## Technologies used:
 * ES6
 * React
