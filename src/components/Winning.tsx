@@ -24,7 +24,7 @@ export const Winning = observer((props: WinningProps) => {
           : id < Store.currentQuestion?.id!
               ? COLORS.fontSecondary
               : 'black',
-      [Store.currentQuestion?.id, id]
+      [Store.currentQuestion, id]
   );
 
   return (

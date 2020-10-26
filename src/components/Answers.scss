@@ -47,10 +47,9 @@
   }
 
   &__info {
-    position: absolute;
-    top: 40%;
-    left: 11%;
+    width: 80%;
     display: flex;
+    align-items: center;
   }
 
   &__letter {

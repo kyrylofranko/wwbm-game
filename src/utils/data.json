@@ -62,38 +62,38 @@
     },
     {
       "id": 5,
-      "body": "Galileo was an Italian astronomer who",
+      "body": "What is the S.I. unit of temperature?",
       "answers": [
-        "developed the telescope",
-        "discovered four satellites of Jupiter",
-        "discovered that the movement of pendulum produces a regular time measurement",
-        "All of the above"
+        "Kelvin",
+        "Celsius",
+        "Centigrade",
+        "Fahrenheit"
       ],
-      "correct": 3,
+      "correct": 0,
       "winning": "$16,000"
     },
     {
       "id": 6,
-      "body": "Exposure to sunlight helps a person improve his health because",
+      "body": "What is the name of the largest freshwater lake in the world?",
       "answers": [
-        "the infrared light kills bacteria in the body",
-        "resistance power increases",
-        "the pigment cells in the skin get stimulated and produce a healthy tan",
-        "the ultraviolet rays convert skin oil into Vitamin D"
+        "Lake Union",
+        "Lake Superior",
+        "Lake Largest",
+        "Lake Goodwin"
       ],
-      "correct": 3,
+      "correct": 0,
       "winning": "$32,000"
     },
     {
       "id": 7,
-      "body": "Sir Thomas Fearnley Cup is awarded to",
+      "body": "When and where was hockey introduced for women in Olympics?",
       "answers": [
-        "a club or a local sport association for remarkable achievements",
-        "amateur athlete, not necessarily an Olympian",
-        "National Olympic Committee for outstanding work",
-        "None of the above"
+        "1908 at London",
+        "1980 at Moscow",
+        "1936 at Berlin",
+        "1924 at Paris"
       ],
-      "correct": 0,
+      "correct": 1,
       "winning": "$64,000"
     },
     {
@@ -122,24 +122,24 @@
     },
     {
       "id": 10,
-      "body": "When is the International Workers' Day?",
+      "body": "Lhasa airport at Tibet is the World's",
       "answers": [
-        "15th April",
-        "12th December",
-        "1st May",
-        "1st August"
+        "largest airport",
+        "highest airport",
+        "lowest airport",
+        "busiest airport"
       ],
-      "correct": 2,
+      "correct": 1,
       "winning": "$500,000"
     },
     {
       "id": 11,
-      "body": "When did China test their first atomic device?",
+      "body": "Which of these African countries is situated south of the equator?",
       "answers": [
-        "1962",
-        "1963",
-        "1964",
-        "1965"
+        "Ethiopia",
+        "Nigeria",
+        "Zambia",
+        "Chad"
       ],
       "correct": 2,
       "winning": "$1,000,000"

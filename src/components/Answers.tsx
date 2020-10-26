@@ -9,10 +9,11 @@ import WrongAnswer from '../assets/sounds/wrong_answer.mp3';
 import CorrecAnswer from '../assets/sounds/correct_answer.mp3';
 
 type AnswersProps = {
-  stopPlayNextRound(id?: string): void;
+  stopNextRound(id?: string): void;
+  stopPlayingRoundSounds(id?: string): void;
 }
 
-export const Answers = observer(({ stopPlayNextRound }: AnswersProps) => {
+export const Answers = observer(({ stopNextRound, stopPlayingRoundSounds }: AnswersProps) => {
   const Store = useStore();
 
   const [playCheckingAnswer, { stop: stopPlayCheckingAnswer }] = useSound(
@@ -41,7 +42,8 @@ export const Answers = observer(({ stopPlayNextRound }: AnswersProps) => {
     if (Store.isCheckingAnswer || Store.correctAnswer !== null) {
       return;
     } else {
-      stopPlayNextRound();
+      stopNextRound();
+      stopPlayingRoundSounds();
       Store.setActiveAnswer(answerIndex);
       Store.setCheckingAnswer(true);
       playCheckingAnswer();

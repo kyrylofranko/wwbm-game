@@ -3,7 +3,7 @@
   height: 100%;
 
   @media screen and (max-width: $tablets-landscape-breakpoint) {
-    width: 330px;
+    height: 280px;
     margin-bottom: 120px;
   }
 
@@ -22,8 +22,9 @@
 
   @media only screen
   and (min-device-width: 375px)
+  and (max-device-width: 500px)
   and (min-device-height: 600px) {
-    height: 200px;
+    height: 160px;
   }
 
   &__image {

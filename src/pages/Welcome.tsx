@@ -11,7 +11,7 @@ export const Welcome = () => {
       MainTheme,
       { volume: 0.1 }
   );
-  const [playLetsPlay] = useSound(
+  const [playLetsPlay, { isPlaying: isLetsPlaySoundPlaying}] = useSound(
       LetsPlay,
       { volume: 0.1 }
   );
@@ -23,7 +23,8 @@ export const Welcome = () => {
   const handleStartGame = useCallback(() => {
     stopPlayingMainTheme();
     playLetsPlay();
-  }, [stopPlayingMainTheme, playLetsPlay])
+    console.log(isLetsPlaySoundPlaying)
+  }, [stopPlayingMainTheme, playLetsPlay, isLetsPlaySoundPlaying])
 
   return (
     <div className="triangle-bg">
@@ -32,7 +33,10 @@ export const Welcome = () => {
           <Thumb />
           <div className="start">
             <h1 className="start__heading">Who wants to be a millionaire?</h1>
-            <Link to="/questions" className="link" onClick={handleStartGame}>
+            <Link to={{
+              pathname: '/questions',
+              state: { isLetsPlaySoundPlaying }
+            }} className="link" onClick={handleStartGame}>
               <AppButton type="button" text="Start" />
             </Link>
           </div>

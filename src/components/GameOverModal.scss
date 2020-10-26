@@ -10,7 +10,7 @@
   align-items: center;
   transform: translateY(-100%);
   transition: transform 1s;
-  z-index: 2;
+  z-index: 20;
 
   &--opened {
     transform: translateY(0);
@@ -22,6 +22,15 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (max-width: $tablets-landscape-breakpoint) {
+      height: 70vh;
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $phones-medium-breakpoint) {
+      width: 90vw;
+    }
   }
 }
 
@@ -31,11 +40,44 @@
   flex-direction: column;
   justify-content: space-around;
 
+  @media screen and (max-width: $tablets-landscape-breakpoint) {
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__text {
     height: 50%;
 
+    @media screen and (max-width: $tablets-landscape-breakpoint) {
+      height: 30%;
+    }
+
     &__heading {
       opacity: 0.5;
+
+      @media screen and (max-width: $tablets-landscape-breakpoint) {
+        text-align: center;
+      }
+    }
+
+    &__body {
+      @media screen and (max-width: $tablets-landscape-breakpoint) {
+        text-align: center;
+      }
+
+      @media screen and (max-width: $phones-big-breakpoint) {
+        font-size: 48px;
+      }
+
+      @media screen and (max-width: $phones-medium-breakpoint) {
+        font-size: 40px;
+      }
+
+      @media screen and (max-width: $phones-old-breakpoint) {
+        font-size: 34px;
+      }
     }
   }
 }
