@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/wwbm-game/static/css/main.e70b273c.chunk.css",
+    "main.js": "/wwbm-game/static/js/main.96ab59c3.chunk.js",
+    "main.js.map": "/wwbm-game/static/js/main.96ab59c3.chunk.js.map",
+    "runtime-main.js": "/wwbm-game/static/js/runtime-main.4a73cf99.js",
+    "runtime-main.js.map": "/wwbm-game/static/js/runtime-main.4a73cf99.js.map",
+    "static/js/2.036b3a41.chunk.js": "/wwbm-game/static/js/2.036b3a41.chunk.js",
+    "static/js/2.036b3a41.chunk.js.map": "/wwbm-game/static/js/2.036b3a41.chunk.js.map",
+    "static/js/3.ebba2cf4.chunk.js": "/wwbm-game/static/js/3.ebba2cf4.chunk.js",
+    "static/js/3.ebba2cf4.chunk.js.map": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.map",
+    "index.html": "/wwbm-game/index.html",
+    "precache-manifest.56f84d0a4295b940a7e87c74aa603959.js": "/wwbm-game/precache-manifest.56f84d0a4295b940a7e87c74aa603959.js",
+    "service-worker.js": "/wwbm-game/service-worker.js",
+    "static/css/main.e70b273c.chunk.css.map": "/wwbm-game/static/css/main.e70b273c.chunk.css.map",
+    "static/js/2.036b3a41.chunk.js.LICENSE.txt": "/wwbm-game/static/js/2.036b3a41.chunk.js.LICENSE.txt",
+    "static/js/3.ebba2cf4.chunk.js.LICENSE.txt": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.LICENSE.txt",
+    "static/media/correct_answer.mp3": "/wwbm-game/static/media/correct_answer.d27f45ad.mp3",
+    "static/media/easy.mp3": "/wwbm-game/static/media/easy.d9cb525d.mp3",
+    "static/media/final_answer.mp3": "/wwbm-game/static/media/final_answer.b0092313.mp3",
+    "static/media/hand.png": "/wwbm-game/static/media/hand.1f1e4da1.png",
+    "static/media/hard.mp3": "/wwbm-game/static/media/hard.15496a46.mp3",
+    "static/media/hard_million.mp3": "/wwbm-game/static/media/hard_million.eeb77fd7.mp3",
+    "static/media/lets_play.mp3": "/wwbm-game/static/media/lets_play.3d8ba0a6.mp3",
+    "static/media/main_theme.mp3": "/wwbm-game/static/media/main_theme.b3f5ba3c.mp3",
+    "static/media/medium.mp3": "/wwbm-game/static/media/medium.78fa5376.mp3",
+    "static/media/next.mp3": "/wwbm-game/static/media/next.096233cf.mp3",
+    "static/media/winning_theme.mp3": "/wwbm-game/static/media/winning_theme.b1412542.mp3",
+    "static/media/wrong_answer.mp3": "/wwbm-game/static/media/wrong_answer.e55862ad.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a73cf99.js",
+    "static/js/2.036b3a41.chunk.js",
+    "static/css/main.e70b273c.chunk.css",
+    "static/js/main.96ab59c3.chunk.js"
+  ]
+}
