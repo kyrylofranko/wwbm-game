@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/wwbm-game/static/css/main.e70b273c.chunk.css",
-    "main.js": "/wwbm-game/static/js/main.96ab59c3.chunk.js",
-    "main.js.map": "/wwbm-game/static/js/main.96ab59c3.chunk.js.map",
+    "main.css": "/wwbm-game/static/css/main.ce810f46.chunk.css",
+    "main.js": "/wwbm-game/static/js/main.352ed33d.chunk.js",
+    "main.js.map": "/wwbm-game/static/js/main.352ed33d.chunk.js.map",
     "runtime-main.js": "/wwbm-game/static/js/runtime-main.4a73cf99.js",
     "runtime-main.js.map": "/wwbm-game/static/js/runtime-main.4a73cf99.js.map",
     "static/js/2.036b3a41.chunk.js": "/wwbm-game/static/js/2.036b3a41.chunk.js",
@@ -10,9 +10,9 @@
     "static/js/3.ebba2cf4.chunk.js": "/wwbm-game/static/js/3.ebba2cf4.chunk.js",
     "static/js/3.ebba2cf4.chunk.js.map": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.map",
     "index.html": "/wwbm-game/index.html",
-    "precache-manifest.56f84d0a4295b940a7e87c74aa603959.js": "/wwbm-game/precache-manifest.56f84d0a4295b940a7e87c74aa603959.js",
+    "precache-manifest.a2d904804a8fae3d911cc3ba4537011a.js": "/wwbm-game/precache-manifest.a2d904804a8fae3d911cc3ba4537011a.js",
     "service-worker.js": "/wwbm-game/service-worker.js",
-    "static/css/main.e70b273c.chunk.css.map": "/wwbm-game/static/css/main.e70b273c.chunk.css.map",
+    "static/css/main.ce810f46.chunk.css.map": "/wwbm-game/static/css/main.ce810f46.chunk.css.map",
     "static/js/2.036b3a41.chunk.js.LICENSE.txt": "/wwbm-game/static/js/2.036b3a41.chunk.js.LICENSE.txt",
     "static/js/3.ebba2cf4.chunk.js.LICENSE.txt": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.LICENSE.txt",
     "static/media/correct_answer.mp3": "/wwbm-game/static/media/correct_answer.d27f45ad.mp3",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.4a73cf99.js",
     "static/js/2.036b3a41.chunk.js",
-    "static/css/main.e70b273c.chunk.css",
-    "static/js/main.96ab59c3.chunk.js"
+    "static/css/main.ce810f46.chunk.css",
+    "static/js/main.352ed33d.chunk.js"
   ]
 }
