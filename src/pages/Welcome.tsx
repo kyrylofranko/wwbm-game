@@ -7,24 +7,18 @@ import MainTheme from '../assets/sounds/main_theme.mp3';
 import LetsPlay from '../assets/sounds/lets_play.mp3';
 
 export const Welcome = () => {
-  const [playMainTheme, { stop: stopPlayingMainTheme }] = useSound(
-      MainTheme,
-      { volume: 0.1 }
-  );
-  const [playLetsPlay, { isPlaying: isLetsPlaySoundPlaying}] = useSound(
-      LetsPlay,
-      { volume: 0.1 }
-  );
+  const [playMainTheme, { stop: stopPlayingMainTheme }] = useSound(MainTheme, { volume: 0.1 });
+  const [playLetsPlay, { isPlaying: isLetsPlaySoundPlaying }] = useSound(LetsPlay, { volume: 0.1 });
 
   useEffect(() => {
     playMainTheme();
-  }, [playMainTheme])
+  }, [playMainTheme]);
 
   const handleStartGame = useCallback(() => {
     stopPlayingMainTheme();
     playLetsPlay();
-    console.log(isLetsPlaySoundPlaying)
-  }, [stopPlayingMainTheme, playLetsPlay, isLetsPlaySoundPlaying])
+    console.log(isLetsPlaySoundPlaying);
+  }, [stopPlayingMainTheme, playLetsPlay, isLetsPlaySoundPlaying]);
 
   return (
     <div className="triangle-bg">
@@ -33,10 +27,14 @@ export const Welcome = () => {
           <Thumb />
           <div className="start">
             <h1 className="start__heading">Who wants to be a millionaire?</h1>
-            <Link to={{
-              pathname: '/questions',
-              state: { isLetsPlaySoundPlaying }
-            }} className="link" onClick={handleStartGame}>
+            <Link
+              to={{
+                pathname: '/questions',
+                state: { isLetsPlaySoundPlaying },
+              }}
+              className="link"
+              onClick={handleStartGame}
+            >
               <AppButton type="button" text="Start" />
             </Link>
           </div>

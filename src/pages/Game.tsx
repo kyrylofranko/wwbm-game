@@ -13,48 +13,33 @@ import mediumRound from '../assets/sounds/medium.mp3';
 import hardRound from '../assets/sounds/hard.mp3';
 import hardRoundMillion from '../assets/sounds/hard_million.mp3';
 
-
-
 export const Game = observer(() => {
   const Store = useStore();
 
   const [modalVisible, setModalVisible] = useState(false);
   const [isWinningsOpen, setWinningsOpen] = useState(false);
 
-  const [playNextRound, { stop: stopNextRound, isPlaying: isNextRoundPlaying }] = useSound(
-      nextRound,
-      { volume: 0.1 }
-  );
+  const [
+    playNextRound,
+    { stop: stopNextRound, isPlaying: isNextRoundPlaying },
+  ] = useSound(nextRound, { volume: 0.1 });
 
-  const [playEasyRound, { stop: stopEasyRound }] = useSound(
-      easyRound,
-      { volume: 0.1 }
-  );
+  const [playEasyRound, { stop: stopEasyRound }] = useSound(easyRound, { volume: 0.1 });
 
-  const [playMediumRound, { stop: stopMediumRound }] = useSound(
-      mediumRound,
-      { volume: 0.1 }
-  );
+  const [playMediumRound, { stop: stopMediumRound }] = useSound(mediumRound, { volume: 0.1 });
 
-  const [playHardRound, { stop: stopHardRound }] = useSound(
-      hardRound,
-      { volume: 0.1 }
-  );
+  const [playHardRound, { stop: stopHardRound }] = useSound(hardRound, { volume: 0.1 });
 
-  const [playHardRoundMillion, { stop: stopHardRoundMillion }] = useSound(
-      hardRoundMillion,
-      { volume: 0.1 }
-  );
+  const [playHardRoundMillion, { stop: stopHardRoundMillion }] = useSound(hardRoundMillion, {
+    volume: 0.1,
+  });
 
-  const stopPlayingRoundSounds = useCallback(
-      () => {
-        stopEasyRound();
-        stopMediumRound();
-        stopHardRound();
-        stopHardRoundMillion();
-      },
-      [stopEasyRound, stopMediumRound, stopHardRound, stopHardRoundMillion]
-  );
+  const stopPlayingRoundSounds = useCallback(() => {
+    stopEasyRound();
+    stopMediumRound();
+    stopHardRound();
+    stopHardRoundMillion();
+  }, [stopEasyRound, stopMediumRound, stopHardRound, stopHardRoundMillion]);
 
   useEffect(() => {
     if (Store.correctAnswer !== null || Store.isCheckingAnswer || Store.wrongAnswer !== null) {
@@ -80,21 +65,27 @@ export const Game = observer(() => {
         playHardRoundMillion();
       }
     }
-  }, [isNextRoundPlaying,Store.currentQuestion, playEasyRound, playMediumRound, playHardRound, playHardRoundMillion]);
+  }, [
+    isNextRoundPlaying,
+    Store.currentQuestion,
+    playEasyRound,
+    playMediumRound,
+    playHardRound,
+    playHardRoundMillion,
+  ]);
 
   useEffect(() => {
     Store.getData();
-    Store.setCurrentQuestion(Store.questions[7]);
+    Store.setCurrentQuestion(Store.questions[0]);
   }, [Store]);
 
   useEffect(() => {
     if (Store.wrongAnswer !== null) {
       setTimeout(() => {
         setModalVisible(true);
-      }, 4000)
+      }, 4000);
     }
   }, [Store.wrongAnswer]);
-
 
   useEffect(() => {
     if (Store.correctAnswer !== null && Store.wrongAnswer === null) {
@@ -102,24 +93,28 @@ export const Game = observer(() => {
         setTimeout(() => {
           setModalVisible(true);
           Store.setCorrectAnswer(null);
-        }, 5000)
-
+        }, 5000);
       } else {
         setTimeout(() => {
           playNextRound();
           Store.setCurrentQuestion(Store.questions[Store.currentQuestion!.id + 1]);
           Store.deleteAnswersHighlights();
-        }, 4000)
+        }, 4000);
       }
     }
-  }, [Store,
+  }, [
+    Store,
     playNextRound,
-    Store.correctAnswer, Store.questions, Store.currentQuestion, Store.deleteAnswersHighlights, Store.setCurrentQuestion]);
+    Store.correctAnswer,
+    Store.questions,
+    Store.currentQuestion,
+    Store.deleteAnswersHighlights,
+    Store.setCurrentQuestion,
+  ]);
 
   const toggleSandwich = useCallback(() => {
     setWinningsOpen(!isWinningsOpen);
   }, [isWinningsOpen]);
-
 
   const winningsStyle = classNames({
     winnings: true,

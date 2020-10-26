@@ -15,7 +15,7 @@ class Store {
   correctAnswer: number | null = null;
   activeAnswer: number | null = null;
   wrongAnswer: number | null = null;
-  isCheckingAnswer: boolean = false;
+  isCheckingAnswer = false;
 
   constructor() {
     makeAutoObservable(this);

@@ -19,20 +19,17 @@ export const Winning = observer((props: WinningProps) => {
   });
 
   const itemTextColor = useMemo(
-      () => Store.currentQuestion?.id === id
-          ? COLORS.primary
-          : id < Store.currentQuestion?.id!
-              ? COLORS.fontSecondary
-              : 'black',
-      [Store.currentQuestion, id]
+    () =>
+      Store.currentQuestion?.id === id
+        ? COLORS.primary
+        : id < Store.currentQuestion?.id!
+        ? COLORS.fontSecondary
+        : 'black',
+    [Store.currentQuestion, id],
   );
 
   return (
-    <li
-        key={id}
-        className={itemStyle}
-        style={{ color: itemTextColor }}
-    >
+    <li key={id} className={itemStyle} style={{ color: itemTextColor }}>
       {winning}
     </li>
   );
