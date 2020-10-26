@@ -1,0 +1,35 @@
+.btn-default {
+  width: 296px;
+  height: 64px;
+  background: $button-color;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $tablets-landscape-breakpoint) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $phones-small-breakpoint) {
+    height: 50px;
+  }
+
+  &:hover {
+    background: $button-color-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background: $button-color-active;
+  }
+}
+
+.link {
+  @media screen and (max-width: $tablets-landscape-breakpoint) {
+    width: 100%;
+  }
+}
+

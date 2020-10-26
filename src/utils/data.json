@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "id": 0,
+      "body": "In what children's game are participants chased by someone designated \"It\"?",
+      "answers": [
+        "Tag",
+        "Simon Says",
+        "Charades",
+        "Hopscotch"
+      ],
+      "correct" : 0,
+      "winning": "$500"
+    },
+    {
+      "id": 1,
+      "body": "On a radio, stations are changed by using what control?",
+      "answers": [
+        "Tuning",
+        "Volume",
+        "Bass",
+        "Treble"
+      ],
+      "correct" : 0,
+      "winning": "$1,000"
+    },
+    {
+      "id": 2,
+      "body": "Which material is most dense?",
+      "answers": [
+        "Silver",
+        "Styrofoam",
+        "Butter",
+        "Gold"
+      ],
+      "correct" : 3,
+      "winning": "$2,000"
+    },
+    {
+      "id": 3,
+      "body": "Which state in the United States is largest by area?",
+      "answers": [
+        "Alaska",
+        "California",
+        "Texas",
+        "Hawaii"
+      ],
+      "correct" : 0,
+      "winning": "$4,000"
+    },
+    {
+      "id": 4,
+      "body": "What is Aurora Borealis commonly known as?",
+      "answers": [
+        "Fairy Dust",
+        "Northern Lights",
+        "Book of ages",
+        "a Game of Thrones main character"
+      ],
+      "correct" : 1,
+      "winning": "$8,000"
+    },
+    {
+      "id": 5,
+      "body": "What is the S.I. unit of temperature?",
+      "answers": [
+        "Kelvin",
+        "Celsius",
+        "Centigrade",
+        "Fahrenheit"
+      ],
+      "correct": 0,
+      "winning": "$16,000"
+    },
+    {
+      "id": 6,
+      "body": "What is the name of the largest freshwater lake in the world?",
+      "answers": [
+        "Lake Union",
+        "Lake Superior",
+        "Lake Largest",
+        "Lake Goodwin"
+      ],
+      "correct": 0,
+      "winning": "$32,000"
+    },
+    {
+      "id": 7,
+      "body": "When and where was hockey introduced for women in Olympics?",
+      "answers": [
+        "1908 at London",
+        "1980 at Moscow",
+        "1936 at Berlin",
+        "1924 at Paris"
+      ],
+      "correct": 1,
+      "winning": "$64,000"
+    },
+    {
+      "id": 8,
+      "body": "Oscar Awards were instituted in",
+      "answers": [
+        "1968",
+        "1929",
+        "1901",
+        "1965"
+      ],
+      "correct": 1,
+      "winning": "$125,000"
+    },
+    {
+      "id": 9,
+      "body": "When did Margaret Thatcher became the first female Prime Minister of Britain?",
+      "answers": [
+        "1998",
+        "1989",
+        "1979",
+        "1800"
+      ],
+      "correct": 2,
+      "winning": "$250,000"
+    },
+    {
+      "id": 10,
+      "body": "Lhasa airport at Tibet is the World's",
+      "answers": [
+        "largest airport",
+        "highest airport",
+        "lowest airport",
+        "busiest airport"
+      ],
+      "correct": 1,
+      "winning": "$500,000"
+    },
+    {
+      "id": 11,
+      "body": "Which of these African countries is situated south of the equator?",
+      "answers": [
+        "Ethiopia",
+        "Nigeria",
+        "Zambia",
+        "Chad"
+      ],
+      "correct": 2,
+      "winning": "$1,000,000"
+    }
+  ]
+}

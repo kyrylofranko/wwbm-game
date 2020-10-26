@@ -13,8 +13,8 @@ module.exports =  {
     },
   },
   rules:  {
-    // Can be used to overwrite rules specified from the extended configs
-    // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
   },
   settings:  {
     react:  {
