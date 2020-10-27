@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44261bbc39e5410773dcc02cb22d2e31",
+    "revision": "0e052aebcfd35ae742e0f760f8f72716",
     "url": "/wwbm-game/index.html"
   },
   {
-    "revision": "f1c3735745069bbe7c33",
-    "url": "/wwbm-game/static/css/main.ce810f46.chunk.css"
+    "revision": "b3e09c14a576ba0894c6",
+    "url": "/wwbm-game/static/css/main.5df4537a.chunk.css"
   },
   {
     "revision": "cb408ac70a1147a2bee5",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f1c3735745069bbe7c33",
-    "url": "/wwbm-game/static/js/main.483afd3c.chunk.js"
+    "revision": "b3e09c14a576ba0894c6",
+    "url": "/wwbm-game/static/js/main.1e02b0fd.chunk.js"
   },
   {
     "revision": "8ddf9081a38948bb5f27",
