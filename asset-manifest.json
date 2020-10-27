@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/wwbm-game/static/css/main.5df4537a.chunk.css",
-    "main.js": "/wwbm-game/static/js/main.bc2d32a3.chunk.js",
-    "main.js.map": "/wwbm-game/static/js/main.bc2d32a3.chunk.js.map",
+    "main.css": "/wwbm-game/static/css/main.1dacb3bf.chunk.css",
+    "main.js": "/wwbm-game/static/js/main.1bcad66a.chunk.js",
+    "main.js.map": "/wwbm-game/static/js/main.1bcad66a.chunk.js.map",
     "runtime-main.js": "/wwbm-game/static/js/runtime-main.4a73cf99.js",
     "runtime-main.js.map": "/wwbm-game/static/js/runtime-main.4a73cf99.js.map",
-    "static/js/2.ae44af54.chunk.js": "/wwbm-game/static/js/2.ae44af54.chunk.js",
-    "static/js/2.ae44af54.chunk.js.map": "/wwbm-game/static/js/2.ae44af54.chunk.js.map",
+    "static/js/2.a37c3ef8.chunk.js": "/wwbm-game/static/js/2.a37c3ef8.chunk.js",
+    "static/js/2.a37c3ef8.chunk.js.map": "/wwbm-game/static/js/2.a37c3ef8.chunk.js.map",
     "static/js/3.ebba2cf4.chunk.js": "/wwbm-game/static/js/3.ebba2cf4.chunk.js",
     "static/js/3.ebba2cf4.chunk.js.map": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.map",
     "index.html": "/wwbm-game/index.html",
-    "precache-manifest.a4a9e38fcf8008dc3388e6d13afac321.js": "/wwbm-game/precache-manifest.a4a9e38fcf8008dc3388e6d13afac321.js",
+    "precache-manifest.651aca5203b98b0d33209efaac242a43.js": "/wwbm-game/precache-manifest.651aca5203b98b0d33209efaac242a43.js",
     "service-worker.js": "/wwbm-game/service-worker.js",
-    "static/css/main.5df4537a.chunk.css.map": "/wwbm-game/static/css/main.5df4537a.chunk.css.map",
-    "static/js/2.ae44af54.chunk.js.LICENSE.txt": "/wwbm-game/static/js/2.ae44af54.chunk.js.LICENSE.txt",
+    "static/css/main.1dacb3bf.chunk.css.map": "/wwbm-game/static/css/main.1dacb3bf.chunk.css.map",
+    "static/js/2.a37c3ef8.chunk.js.LICENSE.txt": "/wwbm-game/static/js/2.a37c3ef8.chunk.js.LICENSE.txt",
     "static/js/3.ebba2cf4.chunk.js.LICENSE.txt": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.LICENSE.txt",
     "static/media/correct_answer.mp3": "/wwbm-game/static/media/correct_answer.d27f45ad.mp3",
     "static/media/easy.mp3": "/wwbm-game/static/media/easy.d9cb525d.mp3",
@@ -30,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4a73cf99.js",
-    "static/js/2.ae44af54.chunk.js",
-    "static/css/main.5df4537a.chunk.css",
-    "static/js/main.bc2d32a3.chunk.js"
+    "static/js/2.a37c3ef8.chunk.js",
+    "static/css/main.1dacb3bf.chunk.css",
+    "static/js/main.1bcad66a.chunk.js"
   ]
 }
