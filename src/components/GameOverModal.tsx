@@ -43,8 +43,8 @@ export const GameOverModal = observer(({ visible, onCancel }: GameOverModalProps
   const shouldConfettiRun = visible && Store.currentQuestion?.id! === 11;
   const endTextBody = useMemo(() => {
     if (Store.currentQuestion?.id === 11) {
-      if (Store.correctAnswer !== null) {
-        return `${Store.currentQuestion.winning} earned.`;
+      if (Store.wrongAnswer === null) {
+        return `${Store.questions[Store.questions.length - 1].winning} earned.`;
       } else {
         return `${Store.questions[Store.currentQuestion?.id! - 1].winning} earned.`;
       }
@@ -53,7 +53,7 @@ export const GameOverModal = observer(({ visible, onCancel }: GameOverModalProps
         ? `${Store.questions[Store.currentQuestion?.id! - 1].winning} earned.`
         : `Better luck next time!`;
     }
-  }, [Store.currentQuestion, Store.questions, Store.correctAnswer]);
+  }, [Store.currentQuestion, Store.questions, Store.wrongAnswer]);
 
   return (
     <>

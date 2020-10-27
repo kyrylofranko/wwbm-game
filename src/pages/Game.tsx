@@ -137,6 +137,7 @@ export const Game = observer(() => {
       if (Store.currentQuestion?.id === 11) {
         setTimeout(() => {
           setModalVisible(true);
+          Store.setCorrectAnswer(null);
         }, 5000);
       } else {
         setTimeout(() => {
