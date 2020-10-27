@@ -121,7 +121,7 @@ export const Game = observer(() => {
 
   useEffect(() => {
     Store.getData();
-    Store.setCurrentQuestion(Store.questions[11]);
+    Store.setCurrentQuestion(Store.questions[0]);
   }, [Store]);
 
   useEffect(() => {
