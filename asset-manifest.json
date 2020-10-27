@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wwbm-game/static/css/main.5df4537a.chunk.css",
-    "main.js": "/wwbm-game/static/js/main.644b543a.chunk.js",
-    "main.js.map": "/wwbm-game/static/js/main.644b543a.chunk.js.map",
+    "main.js": "/wwbm-game/static/js/main.bc2d32a3.chunk.js",
+    "main.js.map": "/wwbm-game/static/js/main.bc2d32a3.chunk.js.map",
     "runtime-main.js": "/wwbm-game/static/js/runtime-main.4a73cf99.js",
     "runtime-main.js.map": "/wwbm-game/static/js/runtime-main.4a73cf99.js.map",
     "static/js/2.ae44af54.chunk.js": "/wwbm-game/static/js/2.ae44af54.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ebba2cf4.chunk.js": "/wwbm-game/static/js/3.ebba2cf4.chunk.js",
     "static/js/3.ebba2cf4.chunk.js.map": "/wwbm-game/static/js/3.ebba2cf4.chunk.js.map",
     "index.html": "/wwbm-game/index.html",
-    "precache-manifest.5ec5579b0a333724bf3ecf8dc9c90086.js": "/wwbm-game/precache-manifest.5ec5579b0a333724bf3ecf8dc9c90086.js",
+    "precache-manifest.a4a9e38fcf8008dc3388e6d13afac321.js": "/wwbm-game/precache-manifest.a4a9e38fcf8008dc3388e6d13afac321.js",
     "service-worker.js": "/wwbm-game/service-worker.js",
     "static/css/main.5df4537a.chunk.css.map": "/wwbm-game/static/css/main.5df4537a.chunk.css.map",
     "static/js/2.ae44af54.chunk.js.LICENSE.txt": "/wwbm-game/static/js/2.ae44af54.chunk.js.LICENSE.txt",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.4a73cf99.js",
     "static/js/2.ae44af54.chunk.js",
     "static/css/main.5df4537a.chunk.css",
-    "static/js/main.644b543a.chunk.js"
+    "static/js/main.bc2d32a3.chunk.js"
   ]
 }
