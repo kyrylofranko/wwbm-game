@@ -121,7 +121,7 @@ export const Game = observer(() => {
 
   useEffect(() => {
     Store.getData();
-    Store.setCurrentQuestion(Store.questions[0]);
+    Store.setCurrentQuestion(Store.questions[11]);
   }, [Store]);
 
   useEffect(() => {
@@ -137,7 +137,6 @@ export const Game = observer(() => {
       if (Store.currentQuestion?.id === 11) {
         setTimeout(() => {
           setModalVisible(true);
-          Store.setCorrectAnswer(null);
         }, 5000);
       } else {
         setTimeout(() => {

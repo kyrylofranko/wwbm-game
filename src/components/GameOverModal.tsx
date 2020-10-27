@@ -43,13 +43,17 @@ export const GameOverModal = observer(({ visible, onCancel }: GameOverModalProps
   const shouldConfettiRun = visible && Store.currentQuestion?.id! === 11;
   const endTextBody = useMemo(() => {
     if (Store.currentQuestion?.id === 11) {
-      return `${Store.currentQuestion.winning} earned.`;
+      if (Store.correctAnswer !== null) {
+        return `${Store.currentQuestion.winning} earned.`;
+      } else {
+        return `${Store.questions[Store.currentQuestion?.id! - 1].winning} earned.`;
+      }
     } else {
       return Store.currentQuestion?.id! > 0
         ? `${Store.questions[Store.currentQuestion?.id! - 1].winning} earned.`
         : `Better luck next time!`;
     }
-  }, [Store.currentQuestion, Store.questions]);
+  }, [Store.currentQuestion, Store.questions, Store.correctAnswer]);
 
   return (
     <>
