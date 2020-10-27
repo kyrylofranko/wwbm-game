@@ -42,6 +42,39 @@
     height: 50px;
   }
 
+  &--selected {
+    @extend .answer;
+    background: url("../assets/images/answer--selected.png") no-repeat;
+    background-size: 100% 100%;
+
+    &:hover {
+      background: url("../assets/images/answer--selected.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &--wrong {
+    @extend .answer;
+    background: url("../assets/images/answer--wrong.png") no-repeat;
+    background-size: 100% 100%;
+
+    &:hover {
+      background: url("../assets/images/answer--wrong.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &--correct {
+    @extend .answer;
+    background: url("../assets/images/answer--correct.png") no-repeat;
+    background-size: 100% 100%;
+
+    &:hover {
+      background: url("../assets/images/answer--correct.png") no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
   &:hover {
     background-image: url("../assets/images/answer--hover.png");
   }
@@ -64,38 +97,5 @@
     @media screen and (max-width: $phones-old-breakpoint) {
       font-size: 14px;
     }
-  }
-}
-
-.answer--selected {
-  @extend .answer;
-  background: url("../assets/images/answer--selected.png") no-repeat;
-  background-size: 100% 100%;
-
-  &:hover {
-    background: url("../assets/images/answer--selected.png") no-repeat;
-    background-size: 100% 100%;
-  }
-}
-
-.answer--wrong {
-  @extend .answer;
-  background: url("../assets/images/answer--wrong.png") no-repeat;
-  background-size: 100% 100%;
-
-  &:hover {
-    background: url("../assets/images/answer--wrong.png") no-repeat;
-    background-size: 100% 100%;
-  }
-}
-
-.answer--correct {
-  @extend .answer;
-  background: url("../assets/images/answer--correct.png") no-repeat;
-  background-size: 100% 100%;
-
-  &:hover {
-    background: url("../assets/images/answer--correct.png") no-repeat;
-    background-size: 100% 100%;
   }
 }

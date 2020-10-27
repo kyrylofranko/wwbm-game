@@ -34,7 +34,13 @@
 }
 
 .triangle-bg {
-  background: linear-gradient(to bottom right, #fff 0%, #fff 50%, $triangle-bg-color 50%, $triangle-bg-color 100%);
+  background: linear-gradient(
+                  to bottom right,
+                  #fff 0%,
+                  #fff 50%,
+                  $triangle-bg-color 50%,
+                  $triangle-bg-color 100%
+  );
 }
 
 .start {

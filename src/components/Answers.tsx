@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { Answer } from './Answer';
-import { v4 as uuid } from 'uuid';
 import { useStore } from '../store';
 import { observer } from 'mobx-react';
 import useSound from 'use-sound';
 import CheckingAnswer from '../assets/sounds/final_answer.mp3';
 import WrongAnswer from '../assets/sounds/wrong_answer.mp3';
-import CorrecAnswer from '../assets/sounds/correct_answer.mp3';
+import CorrectAnswer from '../assets/sounds/correct_answer.mp3';
 
 type AnswersProps = {
   stopNextRound(id?: string): void;
@@ -14,50 +13,50 @@ type AnswersProps = {
 };
 
 export const Answers = observer(({ stopNextRound, stopPlayingRoundSounds }: AnswersProps) => {
-  const Store = useStore();
+  const store = useStore();
 
-  const [playCheckingAnswer, { stop: stopPlayCheckingAnswer }] = useSound(CheckingAnswer, {
+  const [playCheckingAnswerSound, { stop: stopCheckingAnswerSound }] = useSound(CheckingAnswer, {
     volume: 0.15,
   });
 
-  const [playWrongAnswer] = useSound(WrongAnswer, { volume: 0.15 });
+  const [playWrongAnswerSound] = useSound(WrongAnswer, { volume: 0.15 });
 
-  const [playCorrectAnswer, { stop: stopPlayCorrectAnswer }] = useSound(CorrecAnswer, {
+  const [playCorrectAnswerSound, { stop: stopCorrectAnswerSound }] = useSound(CorrectAnswer, {
     volume: 0.15,
   });
 
   useEffect(() => {
-    if (Store.correctAnswer === null) {
-      stopPlayCorrectAnswer();
+    if (store.correctAnswer === null) {
+      stopCorrectAnswerSound();
     }
-  }, [Store.correctAnswer, stopPlayCorrectAnswer]);
+  }, [store.correctAnswer, stopCorrectAnswerSound]);
 
   const handleAnswerSelect = (answerIndex: number) => {
-    if (Store.isCheckingAnswer || Store.correctAnswer !== null) {
+    if (store.isCheckingAnswer || store.correctAnswer !== null) {
       return;
     } else {
       stopNextRound();
       stopPlayingRoundSounds();
-      Store.setActiveAnswer(answerIndex);
-      Store.setCheckingAnswer(true);
-      playCheckingAnswer();
+      store.setActiveAnswer(answerIndex);
+      store.setCheckingAnswer(true);
+      playCheckingAnswerSound();
 
       setTimeout(() => {
-        if (answerIndex === Store.currentQuestion?.correct) {
-          Store.setCorrectAnswer(answerIndex);
-          playCorrectAnswer();
-          stopPlayCheckingAnswer();
-          Store.setCheckingAnswer(false);
+        if (answerIndex === store.currentQuestion?.correct) {
+          store.setCorrectAnswer(answerIndex);
+          playCorrectAnswerSound();
+          stopCheckingAnswerSound();
+          store.setCheckingAnswer(false);
         } else {
-          stopPlayCheckingAnswer();
-          Store.setWrongAnswer(answerIndex);
-          playWrongAnswer();
+          stopCheckingAnswerSound();
+          store.setWrongAnswer(answerIndex);
+          playWrongAnswerSound();
           setTimeout(() => {
-            if (Store.currentQuestion) {
-              Store.setCorrectAnswer(Store.currentQuestion.correct);
+            if (store.currentQuestion) {
+              store.setCorrectAnswer(store.currentQuestion.correct);
             }
 
-            Store.setCheckingAnswer(false);
+            store.setCheckingAnswer(false);
           }, 1700);
         }
       }, 5000);
@@ -66,8 +65,8 @@ export const Answers = observer(({ stopNextRound, stopPlayingRoundSounds }: Answ
 
   return (
     <ul className="answers">
-      {Store.currentQuestion?.answers.map((answer, index) => (
-        <Answer key={uuid()} answer={answer} index={index} handleSelect={handleAnswerSelect} />
+      {store.currentQuestion?.answers.map((answer, index) => (
+        <Answer key={answer} answer={answer} index={index} handleSelect={handleAnswerSelect} />
       ))}
     </ul>
   );

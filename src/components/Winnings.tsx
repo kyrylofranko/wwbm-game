@@ -4,11 +4,11 @@ import { useStore } from '../store';
 import { observer } from 'mobx-react';
 
 export const Winnings = observer(() => {
-  const Store = useStore();
+  const store = useStore();
 
   return (
     <ul className="winnings__list">
-      {Store.questions.map((item) => <Winning key={item.id} {...item} />).reverse()}
+      {store.questions.map((item) => <Winning key={item.id} {...item} />).reverse()}
     </ul>
   );
 });

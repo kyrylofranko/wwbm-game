@@ -10,12 +10,12 @@ type AnswerProps = {
 };
 
 export const Answer = observer(({ answer, index, handleSelect }: AnswerProps) => {
-  const Store = useStore();
+  const store = useStore();
   const itemStyle = classNames({
     answer: true,
-    'answer--selected': Store.activeAnswer === index,
-    'answer--correct': Store.correctAnswer === index,
-    'answer--wrong': Store.wrongAnswer === index,
+    'answer--selected': store.activeAnswer === index,
+    'answer--correct': store.correctAnswer === index,
+    'answer--wrong': store.wrongAnswer === index,
   });
 
   const generateAnswerLetter = (index: number) => {

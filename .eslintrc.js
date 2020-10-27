@@ -15,6 +15,7 @@ module.exports =  {
   rules:  {
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+    "array-element-newline": ["error", { "multiline": true }],
   },
   settings:  {
     react:  {

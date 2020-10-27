@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import { HashRouter as Router } from 'react-router-dom';
 import './styles/index.scss';
 import App from './App';
-import { store, StoreProvider } from './store';
+import { gameStore, StoreProvider } from './store';
 
 ReactDOM.render(
-  <StoreProvider value={store}>
+  <StoreProvider value={gameStore}>
     <Router>
       <App />
     </Router>

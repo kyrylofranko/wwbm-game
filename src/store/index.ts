@@ -60,5 +60,5 @@ class Store {
 
 const StoreContext = createContext<Store>({} as Store);
 export const StoreProvider = StoreContext.Provider;
-export const store = new Store();
+export const gameStore = new Store();
 export const useStore = (): Store => useContext(StoreContext);

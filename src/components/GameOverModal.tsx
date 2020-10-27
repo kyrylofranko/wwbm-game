@@ -14,20 +14,20 @@ type GameOverModalProps = {
 };
 
 export const GameOverModal = observer(({ visible, onCancel }: GameOverModalProps) => {
-  const Store = useStore();
+  const store = useStore();
 
   const [playWinningTheme, { stop: stopWinningTheme }] = useSound(winningTheme, { volume: 0.1 });
 
   useEffect(() => {
-    if (visible && Store.currentQuestion?.id === 11) {
+    if (visible && store.currentQuestion?.id === 11) {
       playWinningTheme();
     }
-  }, [visible, Store.currentQuestion, playWinningTheme]);
+  }, [visible, store.currentQuestion, playWinningTheme]);
 
   const startGameAgain = useCallback(() => {
-    Store.setCurrentQuestion(Store.questions[0]);
-    Store.deleteAnswersHighlights();
-  }, [Store]);
+    store.setCurrentQuestion(store.questions[0]);
+    store.deleteAnswersHighlights();
+  }, [store]);
 
   const handleCloseModal = useCallback(() => {
     startGameAgain();
@@ -40,20 +40,20 @@ export const GameOverModal = observer(({ visible, onCancel }: GameOverModalProps
     'modal--opened': visible,
   });
 
-  const shouldConfettiRun = visible && Store.currentQuestion?.id! === 11;
+  const shouldConfettiRun = visible && store.currentQuestion?.id! === 11;
   const endTextBody = useMemo(() => {
-    if (Store.currentQuestion?.id === 11) {
-      if (Store.wrongAnswer === null) {
-        return `${Store.questions[Store.questions.length - 1].winning} earned.`;
+    if (store.currentQuestion?.id === store.questions.length - 1) {
+      if (store.wrongAnswer === null) {
+        return `${store.questions[store.questions.length - 1].winning} earned.`;
       } else {
-        return `${Store.questions[Store.currentQuestion?.id! - 1].winning} earned.`;
+        return `${store.questions[store.currentQuestion?.id! - 1].winning} earned.`;
       }
     } else {
-      return Store.currentQuestion?.id! > 0
-        ? `${Store.questions[Store.currentQuestion?.id! - 1].winning} earned.`
+      return store.currentQuestion?.id! > 0
+        ? `${store.questions[store.currentQuestion?.id! - 1].winning} earned.`
         : `Better luck next time!`;
     }
-  }, [Store.currentQuestion, Store.questions, Store.wrongAnswer]);
+  }, [store.currentQuestion, store.questions, store.wrongAnswer]);
 
   return (
     <>
@@ -63,7 +63,7 @@ export const GameOverModal = observer(({ visible, onCancel }: GameOverModalProps
           <Thumb />
           <div className="end">
             <div className="end__text">
-              {Store.currentQuestion?.id! > 0 && (
+              {store.currentQuestion?.id! > 0 && (
                 <h2 className="end__text__heading">Total score:</h2>
               )}
               <h1 className="end__text__body">{endTextBody}</h1>

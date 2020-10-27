@@ -10,22 +10,25 @@ type WinningProps = {
 };
 
 export const Winning = observer((props: WinningProps) => {
-  const Store = useStore();
+  const store = useStore();
   const { id, winning } = props;
 
   const itemStyle = classNames({
     winnings__item: true,
-    'winnings__item--active': Store.currentQuestion?.id === id,
+    'winnings__item--active': store.currentQuestion?.id === id,
   });
 
   const itemTextColor = useMemo(
-    () =>
-      Store.currentQuestion?.id === id
-        ? COLORS.primary
-        : id < Store.currentQuestion?.id!
-        ? COLORS.fontSecondary
-        : 'black',
-    [Store.currentQuestion, id],
+    () => {
+      if (store.currentQuestion?.id === id) {
+        return COLORS.primary;
+      } else if (id < store.currentQuestion?.id!) {
+        return COLORS.fontSecondary;
+      } else {
+        return 'black';
+      }
+    },
+    [store.currentQuestion, id],
   );
 
   return (
