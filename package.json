@@ -23,7 +23,7 @@
     "classnames": "^2.2.6",
     "mobx": "^6.0.1",
     "mobx-react": "^7.0.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "16.8.0",
     "react-confetti": "^6.0.0",
     "react-dom": "16.8.0",
